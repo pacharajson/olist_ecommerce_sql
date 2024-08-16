@@ -368,8 +368,8 @@ GROUP BY customer_city
 ORDER BY population DESC
 LIMIT 10;
 ```
-![table_solution_1.png](..\olist_ecommerce_sql\image\table_solution_1.png)
-![viz_solution_1.png](..\olist_ecommerce_sql\image\viz_solution_1.png)
+![table_solution_1.png](..\image\table_solution_1.png)
+![viz_solution_1.png](..\image\viz_solution_1.png)
 
 ---
 ### 2. Which seller city earn the highest revenue, and how many sellers have sold on this e-commerce platform? (Segment sellers by tier)
@@ -393,7 +393,7 @@ USING (order_id)
 GROUP BY sellers.seller_city
 ORDER BY total_revenue DESC;
 ```
-![table_2.png](..\olist_ecommerce_sql\image\table_2.png)
+![table_2.png](..\image\table_2.png)
 
 ```sql
 SELECT
@@ -419,7 +419,7 @@ FROM (
     GROUP BY sellers.seller_city) AS seller_category
 GROUP BY seller_category.seller_tier;
 ```
-![table_sub_2.png](..\olist_ecommerce_sql\image\table_sub_2.png)
+![table_sub_2.png](..\image\table_sub_2.png)
 
 ---
 ### 3. Which product category has the highest and lowest sales on credit card payments?
@@ -444,8 +444,8 @@ GROUP BY pname.product_category_name_english, op.payment_type
 ORDER BY avg_revenue DESC
 LIMIT 10;
 ```
-![table_s_3.png](..\olist_ecommerce_sql\image\table_s_3.png)
-![viz_s_3.png](..\olist_ecommerce_sql\image\viz_s_3.png)
+![table_s_3.png](..\image\table_s_3.png)
+![viz_s_3.png](..\image\viz_s_3.png)
 
 ---
 ### 4. Which technology products category (IOT) has the highest average freight value?
@@ -478,8 +478,8 @@ HAVING product_category_name_english IN
 ('computers', 'computers_accessories', 'signaling_and_security', 'home_appliances_combined', 'electronics')
 ORDER BY avg_total_order_value DESC;
 ```
-![table_s_4.png](..\olist_ecommerce_sql\image\table_s_4.png)
-![viz_s_4.png](..\olist_ecommerce_sql\image\viz_s_4.png)
+![table_s_4.png](..\image\table_s_4.png)
+![viz_s_4.png](..\image\viz_s_4.png)
 
 ---
 ### 5. Which product received the most 1 to 3-star reviews?
@@ -500,8 +500,8 @@ GROUP BY pct.product_category_name_english
 ORDER BY total_reviews DESC
 LIMIT 10;
 ```
-![table_s_5.png](..\olist_ecommerce_sql\image\table_s_5.png)
-![viz_s_5.png](..\olist_ecommerce_sql\image\viz_s_5.png)
+![table_s_5.png](..\image\table_s_5.png)
+![viz_s_5.png](..\image\viz_s_5.png)
 
 
 ## **Conclusion**
